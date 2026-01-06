@@ -1,0 +1,233 @@
+.loginContainer {
+    box-shadow: 0 0 10px -8px;
+     background: linear-gradient(to bottom right, #fefce8, #ffffff);
+}
+
+.loginSection {
+    position: relative;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    background-image: url('/images/login-page.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.overlayBox {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(4px);
+    text-align: center;
+}
+
+.subtitle {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.01rem;
+    text-align: center;
+}
+
+.mainTitle {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-top: 1rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.loginPrompt {
+    margin-top: 1.25rem;
+    text-align: center;
+    color: #d1d5db;
+    /* text-gray-200 */
+}
+
+.createLink {
+    margin-top: 0.25rem;
+    text-align: center;
+    text-decoration: underline;
+    color: white;
+    font-weight: 500;
+    display: inline-block;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .loginSection {
+        padding: 80px;
+    }
+
+    .mainTitle {
+        font-size: 2rem;
+    }
+
+    .tagline {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .loginSection {
+        padding: 60px 30px;
+    }
+
+    .mainTitle {
+        font-size: 1.75rem;
+    }
+
+    .tagline {
+        font-size: 1.125rem;
+    }
+
+    .overlayBox {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .loginSection {
+        padding: 40px 20px;
+    }
+
+    .mainTitle {
+        font-size: 1.5rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .subtitle {
+        font-size: 0.75rem;
+    }
+}
+
+.signupContainer {
+  background: linear-gradient(to right, #f3f4f6, #f9fafb);
+}
+
+.leftPanel {
+ 
+}
+
+.rightPanel {
+  position: relative;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: var(--rv-primary);
+  color: var(--rv-white);
+  font-weight: 600;
+  border-radius: 0.75rem;
+  transition: background 0.2s ease-in-out;
+}
+
+.submitBtn:hover {
+  background-color: var(--rv-forth);
+}
+
+.socialBtn {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d1d5db;
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  background: white;
+  transition: background 0.2s;
+}
+
+.socialBtn:hover {
+  background: #f3f4f6;
+}
+
+.footerNote {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.footerLink {
+  color: var(--rv-primary);
+  text-decoration: underline;
+}
+
+.termsLink {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-top: 0.5rem;
+}
+
+.taskCard {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background-color: var(--rv-primary);
+  color: var(--rv-white);
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.meetingCard {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  background-color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.avatars {
+  display: flex;
+  gap: -0.25rem;
+}
+
+.avatars img {
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+  border: 2px solid white;
+}

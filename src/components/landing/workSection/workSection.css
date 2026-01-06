@@ -1,0 +1,139 @@
+.work-section-one {
+    background-color: var(--rv-primary-dark);
+}
+
+.work-section-one .sub-title {
+    color: var(--rv-white);
+    font-size: 14px;
+}
+
+.work-section-one .heading-title {
+    color: var(--rv-white);
+    margin-bottom: 30px;
+    font-size: 45px;
+}
+
+.work-details-one {
+    padding-left: 28px;
+    position: relative;
+    border-left: 1px solid #616866;
+}
+
+.work-details-one::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -1px;
+    width: 1px;
+    height: 0;
+    background-color: var(--rv-white);
+    transition: all 3s;
+}
+
+.work-details-one.active::after {
+    height: 80%;
+}
+
+.work-details-one .lead-lg {
+    font-size: 25px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--rv-white);
+    margin: 16px;
+}
+
+.work-details-one .lead {
+    color: var(--rv-white);
+    font-size: 18px;
+}
+
+.work-btn {
+    text-align: end;
+    margin-bottom: 90px;
+}
+
+.work-process-one {
+    margin-bottom: 44px;
+}
+
+.work-process-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.work-process-title p {
+    color: var(--rv-white);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.work-processing {
+    width: 100%;
+    height: 6px;
+    background-color: #FFFFFF0A;
+    position: relative;
+}
+
+.work-processing span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #fff;
+    width: 0%;
+    transition: width 1.5s ease;
+}
+
+.work-process-one:last-child {
+    margin-bottom: 0;
+}
+
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x)* .5);
+    padding-left: calc(var(--bs-gutter-x)* .5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+@media only screen and (max-width:1700px) {}
+
+@media only screen and (max-width:1600px) {}
+
+@media only screen and (max-width:1500px) {}
+
+@media only screen and (max-width:1400px) {}
+
+@media only screen and (max-width:1300px) {}
+
+@media only screen and (max-width:1199px) {}
+
+@media only screen and (max-width:1100px) {}
+
+@media only screen and (max-width:1024px) {}
+
+@media only screen and (max-width:991px) {
+  
+}
+
+@media only screen and (max-width:768px) {
+    .work-section-one {
+        padding: 50px 10px;
+    }
+}
+
+@media only screen and (max-width:570px) {}
+
+@media only screen and (max-width:479px) {}
+
+@media only screen and (max-width:425px) {}

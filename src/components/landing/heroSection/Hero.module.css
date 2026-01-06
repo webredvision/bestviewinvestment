@@ -1,0 +1,232 @@
+/* Default styles (desktop) */
+.gridBackground {
+    top: 1%;
+    position: absolute;
+    width: 54rem;
+    height: 54rem;
+    background-image: url('/images/vectors/hero-grid.svg');
+    background-size: contain;
+    background-position: bottom;
+    z-index: 1;
+    background-repeat: no-repeat;
+}
+
+.starIcon {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: 10;
+}
+
+.scribble {
+    position: absolute;
+    top: 2.5rem;
+    right: 8rem;
+    z-index: 10;
+}
+
+/* .knowMoreButton {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background-color: #1a3c34;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    font-size: 1rem;
+    font-weight: 500;
+    z-index: 10;
+    text-decoration: none; 
+} */
+
+.heroContainer {
+    position: relative;
+    width: 100%;
+    min-height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.personContainer {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.gradientCircle {
+    position: absolute;
+    top: 33.3%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 36rem;
+    height: 18rem;
+    background: linear-gradient(to bottom, #FFFFFF 0%, var(--rv-primary) 15%, var(--rv-third) 47%);
+    z-index: 1;
+}
+
+.personImage {
+    position: relative;
+    z-index: 2;
+}
+
+.placeholderLeft {
+    position: absolute;
+    top: 56%;
+    left: 15%;
+    width: 330px;
+    height: 128px;
+    background-color: white;
+    border-radius: 15px;
+    z-index: 3;
+    box-shadow: 0 10px 14px rgba(0, 0, 0, 0.2);
+    background-image: url('/images/hero-card2.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    background-size: 99% 99%;
+}
+
+.placeholderTextleft {
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: rgba(53, 163, 20, 0.8);
+    padding: 5px 10px;
+    border-radius: 8px;
+    z-index: 4;
+}
+
+.placeholderRight {
+    position: absolute;
+    top: 15%;
+    right: 18%;
+    width: 300px;
+    background-color: white;
+    border-radius: 15px;
+    z-index: 3;
+    box-shadow: 10px 10px 14px rgba(0, 0, 0, 0.2);
+    background-image: url('/images/hero-card1.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px;
+    background-size: 90% 99%;
+}
+
+.placeholderText {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Optional for readability */
+    padding: 5px 10px;
+    border-radius: 8px;
+    z-index: 4;
+}
+
+
+@media (max-width: 1300px) {
+    .placeholderRight {
+        top: 15%;
+        right: 8%;
+    }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+    .gridBackground {
+        width: 40rem;
+        height: 40rem;
+    }
+
+    .scribble {
+        right: 4rem;
+        top: 2rem;
+    }
+
+    .knowMoreButton {
+        top: 1.5rem;
+        right: 1rem;
+        font-size: 0.9rem;
+        padding: 0.4rem 1.2rem;
+    }
+
+    .gradientCircle {
+        width: 28rem;
+        height: 14rem;
+    }
+
+    .placeholderRight {
+        display: none;
+    }
+
+
+}
+
+/* Small screens (mobile) */
+@media (max-width: 768px) {
+    .gridBackground {
+        width: 100%;
+        height: 30rem;
+        background-size: cover;
+    }
+
+    .starIcon {
+        top: 1rem;
+        left: 1rem;
+        width: 24px;
+        height: 24px;
+    }
+
+    .scribble {
+        right: 2rem;
+        top: 1.5rem;
+        width: 40px;
+        height: auto;
+    }
+
+    .knowMoreButton {
+        top: 1rem;
+        right: 1rem;
+        font-size: 0.8rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .heroContainer {
+        flex-direction: column;
+        min-height: auto;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .gradientCircle {
+        width: 20rem;
+        height: 10rem;
+    }
+
+    .placeholderLeft,
+    .placeholderRight {
+        width: 90%;
+        max-width: 300px;
+        height: auto;
+        left: 5%;
+        right: 5%;
+    }
+
+    .placeholderLeft {
+        top: auto;
+        bottom: 2rem;
+    }
+
+    .placeholderRight {
+        top: auto;
+        bottom: 8rem;
+    }
+
+}

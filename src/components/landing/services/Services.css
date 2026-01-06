@@ -1,0 +1,224 @@
+.services-section-one {
+    background: color-mix(in srgb, var(--rv-gray) 22%, var(--rv-white));
+}
+
+.service-left-one {
+    padding-right: 90px;
+}
+
+
+.service-left-one .heading-title {
+    margin-bottom: 12px;
+    font-size: 44px;
+    color: var(--rv-primary);
+}
+
+.service-left-details-one {
+    padding-left: 15px;
+    border-left: 1px solid var(--rv-gray);
+    position: relative;
+}
+
+.service-left-details-one.active::after {
+    height: 80%;
+}
+
+.service-left-details-one::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -1px;
+    width: 1px;
+    height: 0;
+    background-color: var(--rv-white-text);
+    transition: all 3s;
+}
+
+.service-left-details-one p {
+    margin-bottom: 75px;
+}
+
+.service-right-one {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+}
+
+.service-right-inner-one {
+    width: 46%;
+    flex-grow: 1;
+}
+
+.service-right-inner-one:nth-child(2) {
+    margin-top: 52px;
+}
+
+.service-right-inner-one:nth-child(4) {
+    margin-top: 52px;
+}
+
+.service-right-inner-one:nth-child(6) {
+    margin-top: 52px;
+}
+
+.service-right-inner-one:nth-child(8) {
+    margin-top: 52px;
+}
+
+.service-box-one {
+    border-radius: 10px;
+    background: var(--rv-white);
+    margin-bottom: 20px;
+    padding: 34px 34px 28px 34px;
+    transition: all 0.8s;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--rv-border);
+}
+
+/* .service-box-one img {
+    position: absolute;
+    top: -50px;
+    right: -20px;
+} */
+
+.service-icon-one {
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.service-icon-one img {
+    width: 48px;
+    height: 48px;
+    opacity: 0.9;
+}
+
+.animated-svg path {
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: draw 3s forwards ease-in-out;
+}
+
+.service-box-one .animated-svg path {
+    animation: draw2 3s forwards ease-in-out;
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes draw2 {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.service-box-one h4 {
+    font-size: 20px;
+    color: var(--rv-primary-dark);
+    margin-bottom: 13px;
+}
+
+.service-box-one p {
+    font-size: 16px;
+    color: color-mix(in srgb, var(--rv-primary-dark) 70%, var(--rv-white));
+    margin-bottom: 13px;
+}
+
+.service-btn-one {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: color-mix(in srgb, var(--rv-gray) 25%, var(--rv-white));
+    color: var(--rv-primary-dark);
+    column-gap: 0px;
+    font-size: 14px;
+    padding: 10px 14px;
+    transition: all 0.5s;
+}
+
+.service-box-one .service-btn-one {
+    border-radius: 9999px;
+}
+
+.service-box-one:hover {
+    transform: translateY(-4px);
+}
+
+.service-box-one:hover .service-btn-one {
+    background: var(--rv-primary);
+    color: var(--rv-white);
+}
+/* 
+.service-box-one img {
+    filter: opacity(0.3);
+} */
+
+
+
+@media only screen and (max-width:1700px) {}
+
+@media only screen and (max-width:1600px) {}
+
+@media only screen and (max-width:1500px) {}
+
+@media only screen and (max-width:1400px) {
+    .service-left-one {
+        padding-right: 0px;
+    }
+}
+
+@media only screen and (max-width:1300px) {}
+
+@media only screen and (max-width:1199px) {
+    .service-right-one {
+        column-gap: 15px;
+    }
+
+    .service-box-one {
+        padding: 38px 20px;
+    }
+}
+
+@media only screen and (max-width:1100px) {}
+
+@media only screen and (max-width:1024px) {}
+
+@media only screen and (max-width:991px) {}
+
+@media only screen and (max-width:768px) {}
+
+@media only screen and (max-width:570px) {
+    .service-right-inner-one {
+        width: 100%;
+    }
+
+    .service-right-inner-one:nth-child(2) {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width:479px) {}
+
+@media only screen and (max-width:425px) {
+    .service-left-one .heading-title {
+        margin-bottom: 12px;
+        font-size: 30px;
+        color: #3B4443;
+    }
+}
+
+
+
+.service-box-one .service-icon-one svg {
+    color: #fff;
+    filter: invert(1);
+}
+
+.service-box-one h4,
+.service-box-one p {
+    color: inherit;
+}

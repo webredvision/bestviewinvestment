@@ -1,0 +1,196 @@
+.process-section-one {
+    padding: 150px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F0ECE8 52.07%, var(--rv-secondary) 118.82%);
+    /* margin-top: -100px; */
+}
+
+.process-section-one .heading-title {
+    margin-bottom: 50px;
+    margin-left: 50px;
+}
+
+.process-inner-one {
+    display: flex;
+    margin-left: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.process-box-one {
+    padding: 70px 25px 70px 80px;
+    border-radius: 100%;
+    border: 1px solid var(--rv-primary);
+    position: relative;
+    background-color: var(--rv-third);
+    transition: all 0.5s;
+    overflow: hidden;
+    width: 405px;
+}
+
+.process-box-one>img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 0%;
+    width: 0%;
+    object-fit: cover;
+    transition: all 0.8s;
+    border-radius: 100%;
+    z-index: -1;
+}
+
+.process-icon-one {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.process-box-one h4 {
+    margin-bottom: 15px;
+    transition: all 0.5s;
+}
+
+.process-box-one p {
+    position: relative;
+    transition: all 0.5s;
+}
+
+.process-box-one h4 span {
+    color: var(--rv-primary);
+    transition: all 0.5s;
+}
+
+.process-box-one+.process-box-one {
+    margin-left: -183px;
+}
+
+.process-box-one:hover {
+    z-index: 1;
+}
+
+.process-box-one:hover>img {
+    height: 100%;
+    width: 100%;
+}
+
+.process-box-one:hover h4,
+.process-box-one:hover h4 span,
+.process-box-one:hover p {
+    color: var(--rv-white);
+}
+
+.process-box-one::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 0%;
+    width: 0%;
+    border-radius: 100%;
+    transition: all 0.8s ease;
+    background: #ff6a1a5e;
+    backdrop-filter: blur(10px);
+    /* background-size: cover;
+    background-position: center;
+    background-color: #3B444385;
+    background-blend-mode: overlay;
+    filter: blur(4px); */
+    /*linear-gradient(180deg, rgba(59, 68, 67, 0) 0%, rgba(59, 68, 67, 0.42) 100%);*/
+}
+
+.process-box-one:hover::before {
+    height: 100%;
+    width: 100%;
+}
+
+.process-box-one:hover .process-icon-one img {
+    filter: invert(1);
+    transition: all;
+    transition-duration: 0.5s;
+    transition-behavior: ease-in-out;
+}
+
+/* .process-box-one:hover .process-icon-one {
+    background: var(--rv-secondary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    align-items: center;
+} */
+
+@media only screen and (max-width:1700px) {}
+
+@media only screen and (max-width:1600px) {}
+
+@media only screen and (max-width:1500px) {}
+
+@media only screen and (max-width:1400px) {
+    .process-box-one {
+        flex-shrink: 0;
+    }
+
+    .process-box-one+.process-box-one {
+        margin-left: -240px;
+    }
+}
+
+@media only screen and (max-width:1300px) {
+    .process-inner-one {
+        flex-wrap: wrap;
+        column-gap: 10px;
+        row-gap: 10px;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width:1199px) {
+
+    .process-box-one+.process-box-one {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width:1100px) {}
+
+@media only screen and (max-width:1024px) {}
+
+@media only screen and (max-width:991px) {
+    .process-box-one {
+        padding: 0 30px;
+        width: 320px;
+        height: 320px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width:768px) {}
+
+@media only screen and (max-width:570px) {
+    .process-section-one {
+        padding: 50px 10px 50px 10px;
+    }
+
+    .process-inner-one {
+        display: flex;
+        margin-left: 0px;
+        /* width: full; */
+        /* background: #000; */
+    }
+
+    .process-icon-one {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media only screen and (max-width:479px) {}
+
+@media only screen and (max-width:425px) {}

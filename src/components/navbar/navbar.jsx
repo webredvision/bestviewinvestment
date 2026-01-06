@@ -39,24 +39,22 @@ export function Navbar({ services }) {
   return (
     <>
       <header
-        className={`${
-          pathname === "/" ? "absolute " : "relative flex"
-        } main-header ${pathname === "/" ? "home-header" : ""} w-full z-[99] 
+        className={`${pathname === "/" ? "absolute " : "relative flex"
+          } main-header ${pathname === "/" ? "home-header" : ""} w-full z-[99] 
   ${isSticky ? "sticky-header--cloned sticky-fixed" : ""}`}
       >
         <div className="container px-10 mx-auto">
           <nav className="main-menu flex items-center lg:space-x-[30px]">
             {/* Logo Section */}
             <div
-              className={`main-menu-logo ${
-                isSticky ? "max-w-[300px]" : "max-w-[300px]"
-              } text-center ml-5 pr-5`}
+              className={`main-menu-logo ${isSticky ? "max-w-[300px]" : "max-w-[300px]"
+                } text-center ml-5 pr-5`}
             >
               <Link href="/">
                 <img
                   src="/images/logo.png"
                   alt="Best View Investment Services"
-                  className="h-[90px] md:h-[90px] w-auto"
+                  className="h-[auto] md:h-[90px] w-auto"
                 />
               </Link>
             </div>
@@ -64,9 +62,8 @@ export function Navbar({ services }) {
             {/* Menu Section */}
             <div className="main-menu-inner flex items-center grow font-semibold">
               <ul
-                className={`main-menu-list hidden ${
-                  isSticky ? " py-[20px] pl-[80px]" : " py-[40px] pl-[80px]"
-                } `}
+                className={`main-menu-list hidden ${isSticky ? " py-[20px] pl-[80px]" : " py-[40px] pl-[80px]"
+                  } `}
               >
                 <li className="menu-item-children ">
                   <Link href="/">Home</Link>
@@ -138,25 +135,22 @@ export function Navbar({ services }) {
                 onClick={toggleMobileSideMenu}
               >
                 <span
-                  className={`line-1 ${
-                    isSticky
+                  className={`line-1 ${isSticky
                       ? "bg-[var(--rv-primary)]"
                       : "bg-[var(--rv-primary)]"
-                  }`}
+                    }`}
                 ></span>
                 <span
-                  className={`line-2 ${
-                    isSticky
+                  className={`line-2 ${isSticky
                       ? "bg-[var(--rv-primary)]"
                       : "bg-[var(--rv-primary)]"
-                  }`}
+                    }`}
                 ></span>
                 <span
-                  className={`line-3 ${
-                    isSticky
+                  className={`line-3 ${isSticky
                       ? "bg-[var(--rv-primary)]"
                       : "bg-[var(--rv-primary)]"
-                  }`}
+                    }`}
                 ></span>
               </div>
 

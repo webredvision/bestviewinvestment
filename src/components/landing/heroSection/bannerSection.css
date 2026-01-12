@@ -13,7 +13,7 @@
   justify-content: center;
   padding: 10px 18px;
   border-radius: 10px;
-  background: color-mix(in srgb, var(--rv-gray) 35%, transparent);
+  background: color-mix(in srgb, #f97b40 35%, #a73d09);
   color: var(--rv-white);
   border: 1px solid rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(10px);
@@ -242,7 +242,6 @@
     bottom: 50px;
   }
 }
-
 
 @media only screen and (max-width: 479px) {
   .banner-section-one p.heading-details {

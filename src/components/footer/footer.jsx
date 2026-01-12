@@ -304,12 +304,13 @@ const Footer = ({ siteData, servicedata, arn, socialMedia }) => {
             </p>
             {siteData?.websiteDomain ? (
               <p className="mt-3 sm:mt-0">
+                Designed & Developed by{" "}
                 <Link
-                  href={siteData.websiteDomain}
+                  href="https://www.redvisiontechnologies.com"
                   className="hover:underline"
                   target="_blank"
                 >
-                  bestviewinvestment.com
+                  REDVision Global Technologies
                 </Link>
               </p>
             ) : null}

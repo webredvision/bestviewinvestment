@@ -72,9 +72,5 @@ export function middleware(request) {
 
 // ✅ Middleware runs on APIs + admin/devadmin
 export const config = {
-  matcher: [
-    // "/api/:path*",
-    // "/admin/:path*",
-    // "/devadmin/:path*"
-  ],
+  matcher: ["/api/:path*", "/admin/:path*", "/devadmin/:path*"],
 };

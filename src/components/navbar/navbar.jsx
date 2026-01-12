@@ -6,6 +6,7 @@ import "./header.css";
 import MobileHeaderSideMenu from "./mobileSidemenu";
 import { usePathname } from "next/navigation";
 import { FaAngleDown } from "react-icons/fa6";
+import { MAIN_MENU_ITEMS } from "./menuOptions";
 
 export function Navbar({ services }) {
   const pathname = usePathname();
@@ -39,16 +40,18 @@ export function Navbar({ services }) {
   return (
     <>
       <header
-        className={`${pathname === "/" ? "absolute " : "relative flex"
-          } main-header ${pathname === "/" ? "home-header" : ""} w-full z-[99] 
+        className={`${
+          pathname === "/" ? "absolute " : "relative flex"
+        } main-header ${pathname === "/" ? "home-header" : ""} w-full z-[99] 
   ${isSticky ? "sticky-header--cloned sticky-fixed" : ""}`}
       >
         <div className="container px-10 mx-auto">
           <nav className="main-menu flex items-center lg:space-x-[30px]">
             {/* Logo Section */}
             <div
-              className={`main-menu-logo ${isSticky ? "max-w-[300px]" : "max-w-[300px]"
-                } text-center ml-5 pr-5`}
+              className={`main-menu-logo ${
+                isSticky ? "max-w-[300px]" : "max-w-[300px]"
+              } text-center ml-5 pr-5`}
             >
               <Link href="/">
                 <img
@@ -62,68 +65,56 @@ export function Navbar({ services }) {
             {/* Menu Section */}
             <div className="main-menu-inner flex items-center grow font-semibold">
               <ul
-                className={`main-menu-list hidden ${isSticky ? " py-[20px] pl-[80px]" : " py-[40px] pl-[80px]"
-                  } `}
+                className={`main-menu-list hidden ${
+                  isSticky ? " py-[20px] pl-[80px]" : " py-[40px] pl-[80px]"
+                } `}
               >
-                <li className="menu-item-children ">
-                  <Link href="/">Home</Link>
-                  <i className="fa-solid fa-chevron-down"></i>
-                </li>
-                <li className="menu-item-children">
-                  <Link href="/about-us">About Us</Link>
-                </li>
-                <li className="menu-item-children">
-                  <Link href="/gallery">Gallery</Link>
-                </li>
-                <li className="menu-item-children">
-                  <Link href="#">Tools</Link>
-                  <FaAngleDown />
-                  <ul className={`menu-item-children-list`}>
-                    <li>
-                      <Link href="/tools/calculators">
-                        Financial Calculators
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/tools/financial-health">
-                        Check Financial Health
-                      </Link>
-                    </li>
-                    {/* <li>
-                      <Link href="/news">Market News</Link>
-                    </li> */}
-                    <li>
-                      <Link href="/performance/fund-performance">
-                        Fund Performance
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/tools/pay-premium-online">
-                        Pay Premium Online
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/tools/useful-links">Useful Links</Link>
-                    </li>
-                  </ul>
-                </li>
-                <li className="menu-item-children">
-                  <Link href="#">Services</Link>
-                  <FaAngleDown />
-                  <ul className={`menu-item-children-list`}>
-                    {services?.map((item, index) => (
-                      <li key={index}>
-                        <Link href={`/services/${item?.link}`}>
-                          {item?.name}
-                        </Link>
+                {MAIN_MENU_ITEMS.map((menuItem) => {
+                  if (menuItem.key === "tools") {
+                    return (
+                      <li key={menuItem.key} className="menu-item-children">
+                        <Link href="#">{menuItem.label}</Link>
+                        <FaAngleDown />
+                        <ul className="menu-item-children-list">
+                          {menuItem.children.map((childItem) => (
+                            <li key={childItem.href}>
+                              <Link href={childItem.href}>
+                                {childItem.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
                       </li>
-                    ))}
-                  </ul>
-                </li>
+                    );
+                  }
 
-                <li className="menu-item-children">
-                  <Link href="/contact-us">Contact Us</Link>
-                </li>
+                  if (menuItem.key === "services") {
+                    return (
+                      <li key={menuItem.key} className="menu-item-children">
+                        <Link href="#">{menuItem.label}</Link>
+                        <FaAngleDown />
+                        <ul className="menu-item-children-list">
+                          {services?.map((serviceItem, index) => (
+                            <li key={index}>
+                              <Link href={`/services/${serviceItem?.link}`}>
+                                {serviceItem?.name}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </li>
+                    );
+                  }
+
+                  return (
+                    <li key={menuItem.href} className="menu-item-children">
+                      <Link href={menuItem.href}>{menuItem.label}</Link>
+                      {menuItem.showChevron ? (
+                        <i className="fa-solid fa-chevron-down"></i>
+                      ) : null}
+                    </li>
+                  );
+                })}
                 {/* <li className="menu-item-children">
                   <Link href="/login">Login</Link>
                 </li> */}
@@ -135,22 +126,25 @@ export function Navbar({ services }) {
                 onClick={toggleMobileSideMenu}
               >
                 <span
-                  className={`line-1 ${isSticky
+                  className={`line-1 ${
+                    isSticky
                       ? "bg-[var(--rv-primary)]"
                       : "bg-[var(--rv-primary)]"
-                    }`}
+                  }`}
                 ></span>
                 <span
-                  className={`line-2 ${isSticky
+                  className={`line-2 ${
+                    isSticky
                       ? "bg-[var(--rv-primary)]"
                       : "bg-[var(--rv-primary)]"
-                    }`}
+                  }`}
                 ></span>
                 <span
-                  className={`line-3 ${isSticky
+                  className={`line-3 ${
+                    isSticky
                       ? "bg-[var(--rv-primary)]"
                       : "bg-[var(--rv-primary)]"
-                    }`}
+                  }`}
                 ></span>
               </div>
 
@@ -173,7 +167,7 @@ export function Navbar({ services }) {
                   <span className="line-2"></span>
                 </div>
               </div>
-            </div>
+            </div> 
           </nav>
         </div>
         {/* SideMenu Popup */}
